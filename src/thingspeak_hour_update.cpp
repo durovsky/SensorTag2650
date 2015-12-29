@@ -101,6 +101,10 @@ int main()
   //======================================================
   //Push data to ThingSpeak
   //======================================================
+
+  //Safety delay (it is possible to push data to thingspeak channel every 15 second and minute update is pushing as well)
+  usleep(30000000);
+
   exploringBB::SocketClient sc("thingspeak.com", 80);
   std::ostringstream head, data;
 
