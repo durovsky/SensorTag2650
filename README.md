@@ -33,6 +33,7 @@ This stack contains three executables : sensortag, thingspeak_minute_update, thi
 * **thingpeak_hour_update** - is designed to be launched by crontab every hour - computes average values and pushes results to ThingSpeak channel
 
 **Usage:**
+
 `SensorTag2650/build$ ./sensortag AA:BB:CC:DD:EE:FF`  
 where AA:BB:CC:DD:EE:FF is BLE address obtained by sudo hcitool lescan
 
@@ -43,6 +44,7 @@ pushes actual data in _MINUTE files to ThingSpeak channel
 pushes average values from _HOUR files to ThingSpeak channel
 
 **Tested configurations**
+
 Ubuntu 14.04.03 LTS, Bluez 5.36, SensorTag2650 fw 1.2, ASUS BT400 dongle
 BeagleBone Black Debian 3.8 Bluez 5.36, SensorTag2650 fw 1.2, ASUS BT400 dongle
 
