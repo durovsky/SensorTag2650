@@ -43,9 +43,10 @@ pushes actual data in _MINUTE files to ThingSpeak channel
 `SensorTag2650/build$ ./thingspeak_hour_update` 
 pushes average values from _HOUR files to ThingSpeak channel
 
-**Tested configurations**
+**Tested configurations:**
 
 Ubuntu 14.04.03 LTS, Bluez 5.36, SensorTag2650 fw 1.2, ASUS BT400 dongle
+
 BeagleBone Black Debian 3.8 Bluez 5.36, SensorTag2650 fw 1.2, ASUS BT400 dongle
 
 
