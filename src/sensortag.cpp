@@ -250,13 +250,11 @@ int createChildProcess(const char* command, char* const arguments[], char* const
        unsigned int temperature_raw = (temperature_bytes[1] << 8) + temperature_bytes[0];
 
        //Compute and filter final value
-       if((temperature > 0) && (temperature < 32768))
+       if(temperature_raw < 32768)
          temperature = temperature_raw/128.0;              //Positive temperature values
-       else if (temperature > 32768)
+       else if (temperature_raw > 32768)
          temperature = (temperature_raw - 65536) / 128.0;  //Negative temperature values
-       else
-         temperature = temperature;                        //Filtering false zero measurements
-     }
+    }
 
      //Light notification
      int light_index = actual_line.find(light_handle);
