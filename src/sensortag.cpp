@@ -248,12 +248,13 @@ int createChildProcess(const char* command, char* const arguments[], char* const
 
        //Merge bytes
        unsigned int temperature_raw = (temperature_bytes[1] << 8) + temperature_bytes[0];
-
+       double temperature_double = static_cast<double>(temperature_raw);
+       
        //Compute and filter final value
-       if(temperature_raw < 32768)
-         temperature = temperature_raw/128.0;              //Positive temperature values
-       else if (temperature_raw > 32768)
-         temperature = (temperature_raw - 65536) / 128.0;  //Negative temperature values
+       if(temperature_double < 32768)
+         temperature = temperature_double/128.0;              //Positive temperature values
+       else if (temperature_double > 32768)
+         temperature = (temperature_double - 65536) / 128.0;  //Negative temperature values
     }
 
      //Light notification
