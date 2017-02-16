@@ -2,7 +2,7 @@
 C++ application collecting data from TI SensorTag 2650 and pushing records to Thingspeak chanell
 
 **Requirements:**
-* Bluetooth dongle with Low energy support
+* Bluetooth dongle with LE support
 * **hcitool** and **gatttool** for connecting to BLE devices
 * cmake
 * ThingSpeak account
